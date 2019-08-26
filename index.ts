@@ -1,8 +1,8 @@
-import express from 'express'
+import * as express from 'express'
 import { createServer } from 'http'
-import socket from 'socket.io'
-import path from 'path'
-import ejs from 'ejs'
+import * as socket from 'socket.io'
+import * as path from 'path'
+import * as ejs from 'ejs'
 
 class Server {
     _app: any = express()
@@ -29,7 +29,9 @@ class Server {
     }
 
     startServer(){
-        this._server.listen(3000)
+        this._server.listen(process.env.PORT || 3000, () => {
+            console.log(`=> Server running... [PORT ${process.env.PORT || 3000}]`)
+        })
     }
 }
 
