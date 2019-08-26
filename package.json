@@ -1,0 +1,29 @@
+{
+  "name": "Chat",
+  "version": "1.0.0",
+  "description": "A real time online chat.",
+  "main": "index.ts",
+  "scripts": {
+    "start": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guilhermebkel/Chat.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guilhermebkel/Chat/issues"
+  },
+  "homepage": "https://github.com/guilhermebkel/Chat#readme",
+  "dependencies": {
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.1",
+    "socket.io": "^2.2.0",
+    "sucrase": "^3.10.1",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3"
+  }
+}
