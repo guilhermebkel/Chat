@@ -6,6 +6,7 @@ html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #000;
   }
   
   #chat {
@@ -18,21 +19,26 @@ html, body {
   
   input {
     width: 600px;
-    border: 1px solid #ddd;
+    border: 2px solid #18ffff;
     height: 50px;
     padding: 0 20px;
     font-size: 14px;
+    color: #18ffff;
+  }
+  input::placeholder{
+    color: rgba(24, 255, 255, 0.3)
   }
   
   button {
     width: 600px;
     height: 50px;
     font-size: 14px;
-    background: #069;
+    background: #00e5ff;
+    border: none;
     text-align: center;
     line-height: 50px;
     font-weight: bold;
-    color: #FFF;
+    color: #000;
     margin-top: 10px;
   }
   
@@ -40,6 +46,6 @@ html, body {
     width: 600px;
     height: 400px;
     margin: 20px 0;
-    border: 1px solid #ddd;
+    border: 2px solid #18ffff;
     padding: 20px;
   }

@@ -40,7 +40,8 @@ class Server {
     handleConnection(){
         this._io.on('connection', socket => {
             console.log(`Socket connected: ${socket.id}`)
-            
+            socket.emit('previousMessages', this._messages)
+
             socket.on('sendMessage', data => {
                 this._messages.push(data)
                 socket.broadcast.emit('receivedMessage', data)
