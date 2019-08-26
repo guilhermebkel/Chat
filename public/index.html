@@ -13,9 +13,9 @@
     </head>
     <body>
         <form id="chat">
-            <input type="text" name="username" placeholder="Type your username...">
+            <input type="text" name="username" placeholder="Type your username..." required>
             <div class="messages"></div>
-            <input type="text" name="message" placeholder="Type your message...">
+            <input type="text" name="message" placeholder="Type your message..." required>
             <button type="submit">Send</button>
         </form>
 
@@ -23,7 +23,7 @@
             var socket = io('http://localhost:3000')
         
             function renderMessage(message){
-                $('.messages').append('<div class="message"><strong>'+ message.author +'</strong>:'+ message.message +'</div>')
+                $('.messages').append('<div class="message"><strong>'+ message.author +'</strong>: '+ message.message +'</div>')
             }
 
             socket.on('previousMessages', function(messages){
