@@ -43,6 +43,7 @@ class Server {
             
             socket.on('sendMessage', data => {
                 this._messages.push(data)
+                socket.broadcast.emit('receivedMessage', data)
             })
         })
     }
